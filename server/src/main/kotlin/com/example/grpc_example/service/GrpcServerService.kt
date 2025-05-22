@@ -9,8 +9,8 @@ import org.apache.commons.logging.LogFactory
 import org.springframework.stereotype.Service
 
 @Service
-internal class GrpcServerService : SimpleImplBase() {
-    override fun sayHello(req: HelloRequest, responseObserver: StreamObserver<HelloReply?>) {
+class GrpcServerService : SimpleImplBase() {
+    override fun sayHello(req: HelloRequest, responseObserver: StreamObserver<HelloReply>) {
         log.info("Hello " + req.getName())
         require(!req.getName().startsWith("error")) { "Bad name: " + req.getName() }
         if (req.getName().startsWith("internal")) {
@@ -21,7 +21,7 @@ internal class GrpcServerService : SimpleImplBase() {
         responseObserver.onCompleted()
     }
 
-    override fun streamHello(req: HelloRequest, responseObserver: StreamObserver<HelloReply?>) {
+    override fun streamHello(req: HelloRequest, responseObserver: StreamObserver<HelloReply>) {
         log.info("Hello " + req.getName())
         var count = 0
         while (count < 10) {
