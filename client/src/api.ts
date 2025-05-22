@@ -14,4 +14,4 @@ client.sayHello(request, {}, (err, response) => {
 client.streamHello(request)
     .on('data', response => console.log(response.getMessage()))
     .on('end', () => console.log('done'))
-    .on('error', err => { throw err})
+    .on('error', err => { throw err })
