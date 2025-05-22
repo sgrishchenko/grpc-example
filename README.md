@@ -1,5 +1,10 @@
 # grpc-example
 
+## Prerequisites
+- Java (version 21)
+- Node.js (version 22)
+- Docker 
+
 ## Running
 
 ### Backend
