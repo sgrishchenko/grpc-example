@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "eslint . --ignore-pattern 'proto/*'",
     "preview": "vite preview",
     "protogen": "docker run --rm -v $(pwd)/../proto:/proto:ro -v $(pwd)/proto:/gen $(docker build -q .)"
   },
