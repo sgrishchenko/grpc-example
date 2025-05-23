@@ -1,18 +1,19 @@
 # grpc-example
 
 ## Prerequisites
+
 - Java (version 21)
 - Node.js (version 22)
-- Docker 
+- Docker
 
 ## Running
 
 ### Backend
 
-  ```bash
-  cd server
-  ./gradlew :bootRun
-  ```
+```bash
+cd server
+./gradlew :bootRun
+```
 
 ### Frontend
 
@@ -22,6 +23,7 @@ npm install
 npm run protogen
 npm run dev
 ```
+
 ### Proxy
 
 ```bash
