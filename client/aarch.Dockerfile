@@ -20,7 +20,7 @@ RUN chmod +x /usr/local/bin/protoc-gen-js
 # Install protoc-gen-grpc-web
 RUN curl -LO https://github.com/grpc/grpc-web/releases/download/1.5.0/protoc-gen-grpc-web-1.5.0-linux-aarch64
 
-RUN mv protoc-gen-grpc-web-1.5.0-linux-x86_64 /usr/local/bin/protoc-gen-grpc-web
+RUN mv protoc-gen-grpc-web-1.5.0-linux-aarch64 /usr/local/bin/protoc-gen-grpc-web
 RUN chmod +x /usr/local/bin/protoc-gen-grpc-web
 
 # Prepare input/output directories
