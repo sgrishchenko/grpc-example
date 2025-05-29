@@ -4,10 +4,10 @@ RUN apt-get update
 RUN apt-get install curl unzip -y
 
 ARG TARGETARCH
-ENV ARCHNAME=x86_64
+ARG ARCHNAME=x86_64
 
 # Install protoc
-RUN if [ $TARGETARCH = amd64 ]; then ARCHNAME=aarch_64; fi && \
+RUN if [ $TARGETARCH = arm64 ]; then ARCHNAME=aarch_64; fi && \
     curl -LO https://github.com/protocolbuffers/protobuf/releases/download/v31.0/protoc-31.0-linux-$ARCHNAME.zip && \
     unzip protoc-31.0-linux-$ARCHNAME.zip
 
